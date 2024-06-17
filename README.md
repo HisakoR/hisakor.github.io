@@ -1,2 +1,2 @@
 # hisakor.github.io
-web
+aminaoc
