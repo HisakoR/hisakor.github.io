@@ -1,0 +1,66 @@
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+hr {
+  border-bottom: 2px solid #f3bd55;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1920px;
+overflow-x: hidden;
+}
+
+.banner {
+  position: absolute;
+  left: 0;
+}
+
+.graphSpace {
+padding-top: 35vh;
+}
+
+.headSpace {
+padding-top: 5vh;
+}
+
+.titleMain {
+position: relative;
+font-size: 30px;
+font-weight: bold;
+top: 15px;
+left: 120px;
+color: white;
+}
+
+.SF {
+  position: absolute;
+  left: 0;
+}
+
+.titleSub {
+position: absolute;
+font-size: 15px;
+top: 25px;	
+right: 120px;
+color: white;
+}
+
+.fixed-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #222;
+  z-index: 999;
+}
+
+
+.SF {
+  position: absolute;
+  left: 0;
+}
