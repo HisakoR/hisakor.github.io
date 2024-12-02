@@ -1,8 +1,5 @@
-//QIEH 到此一游
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,14 +37,112 @@
 <a href="https://hisakor.github.io/" target="_blank"><i>原地tp</i></a>
 
 <br/>
-
+<img src="css/i/SF.png" class="SF" width="203" height="203">
 <!-- 施工封锁线 -->
 <hr />
 <h1 style="font-family:arial;color:f3bd55;font-size:20px;text-align:center">=⚠施工中⚠=</h1>
 <hr />
 <!-- 施工封锁线 -->
 
+<!-- 为轮播图添加容器 -->
+<div class="page-wrapper">
+    <div id="characterCarousel" class="character-carousel"></div>
+    <div id="characterInfo" class="character-info-container"></div>
+</div>
+
+<!-- 保持原有的图片引用 -->
 <img src="css/i/SF.png" class="SF" width="203" height="203">
 
+<!-- 新添JavaScript代码 -->
+<script>
+    const characters = [
+        /* 你的人物数据 */
+    ];
+
+    let currentIndex = 1;
+
+    function initializeCarousel() {
+        const carousel = document.getElementById('characterCarousel');
+        const infoBox = document.getElementById('characterInfo');
+
+        // 移除原有的样式
+        carousel.style.cssText = '';
+
+        characters.forEach((character, index) => {
+            const container = createCharacterContainer(character, index);
+            carousel.appendChild(container);
+        });
+
+        showInfo(0);
+    }
+
+    function createCharacterContainer(character, index) {
+        const container = document.createElement('div');
+        container.className = 'character-image-container';
+        if (index === currentIndex) {
+            container.classList.add('active');
+        }
+        const img = document.createElement('img');
+        img.src = character.image;
+        img.alt = character.name;
+        img.className = 'character-image';
+        container.appendChild(img);
+        container.onclick = () => showInfo(index - currentIndex);
+        return container;
+    }
+
+    function showInfo(direction) {
+        const containers = document.querySelectorAll('.character-image-container');
+        containers[currentIndex].classList.remove('active');
+
+        const oldIndex = currentIndex;
+        currentIndex = (currentIndex + direction + characters.length) % characters.length;
+
+        updateCharacterInfo();
+        updateCarousel(oldIndex, direction);
+    }
+
+    function updateCharacterInfo() {
+        const character = characters[currentIndex];
+        const infoDiv = document.getElementById('characterInfo');
+
+        // 清除旧的定时器和动画
+        clearTimeout(timer);
+        Object.keys(infoDiv.style).forEach(prop => infoDiv.style[prop] = '');
+
+        infoBox.style.visibility = 'hidden';
+
+        setTimeout(() => {
+            infoDiv.innerHTML = `
+                <h2>${character.name}</h2>
+                <p>${character.info}</p>
+                <h3>特点</h3>
+                <p>${character.characteristics}</p>
+                <h3>背景故事</h3>
+                <p>${character.background}</p>
+            `;
+
+            // 重新应用样式和安全检查
+            checkAndApplyZindexes();
+            infoBox.style.visibility = 'visible';
+        }, 10);
+    }
+
+    function checkAndApplyZindexes() {
+        const elements = document.querySelectorAll('.character-carousel, .character-info-container');
+        elements.forEach(el => {
+            if (window.getComputedStyle(el).position === 'absolute' ||
+                window.getComputedStyle(el).position === 'relative') {
+                el.style.zIndex = 1000;
+            }
+        });
+    }
+
+    // 初始化轮播图
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeCarousel();
+    });
+</script>
 </body>
+</html>
 </html>
