@@ -1,47 +1,276 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>兔子洞</title>
-        <link rel="stylesheet" href="css/index.css">
-    </head>
-    <body class="main-body">
-        <div class="headSpace"></div>
-        <img src="css/i/USSbanner.png" class="banner">
-<!-- 以下是导航栏的内容 -->
-        <div class="fixed-bar">
-            <div class="titleMain">
-                黄油
-            </div>
-            <div class="titleSub">
-                一些色情的玩意
-            </div>
-        </div>
-<!-- 以上是导航栏的内容 -->
-
-        <div class="graphSpace"></div>
-        <p><b>“人们总是微笑着来到这，不放弃自己不自卑” —— 小行星坠落</b></p>
-        <br/>
-        <p style="font-family:arial;font-size:50px;">现在，开启你最伟大的旅途吧</p>
-        <p>Get down<br/>嘘も 夢も 今も どうでもいい<br/>二人で一緒に過ごす Winter Night<br/>優しいキスをして 星に願いかけて<br/>
-            過去を忘れ<br/>そっと 髪を撫でて 恋人よ<br/>ささやく 言葉が 胸にこみあげる<br/>永遠に愛してる 今日より愛してる<br/>
-            ずっと Eternal Love
-        </p>
-        <a href="https://space.bilibili.com/475915131" target="_blank"><i>bilibili主页</i></a>
-        <a href="https://hisakor.github.io/" target="_blank"><i>原地tp</i></a>
-        <br/>
-
-<!-- 施工封锁线 -->
-        <hr />
-        <h1 style="font-family:arial;color:f3bd55;font-size:20px;text-align:center">=⚠施工中⚠=</h1>
-        <hr />
-<!-- 施工封锁线 -->
-    </body>
-<!-- 滚筒画廊 -->
-    <div class="second-body">
-        
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兔子洞</title>
+    <style>
+        .a-body {
+            margin: 0 auto;
+            max-width: 1500px;
+        overflow-x: hidden;
+        }
+        hr {
+            border-bottom: 2px solid #f3bd55;
+        }
+        .banner {
+            position: absolute;
+            left: 0;
+        }
+        p {
+            font-family: verdana;
+            font-size: 20px;
+        }
+        .graphSpace {
+        padding-top: 35vh;
+        }
+        .headSpace {
+        padding-top: 5vh;
+        }
+        .titleMain {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        top: 15px;
+        left: 120px;
+        color: white;
+        }
+        .SF {
+            position: absolute;
+            left: 0;
+        z-index: 1000;
+        }
+        .titleSub {
+            position: absolute;
+            font-size: 15px;
+            top: 25px;
+            right: 120px;
+            color: white;
+        }
+        .fixed-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #222;
+            z-index: 999;
+        }
+        .b-body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .character-carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            height: 400px;
+            overflow: hidden;
+        }
+        .character-image-container {
+            width: 180px;
+            height: 250px;
+            margin: 0 10px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        .character-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 2px solid #333;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
+        }
+        .character-image-container:hover .character-image {
+            transform: scale(1.05);
+        }
+        .character-image-container.active {
+            width: 250px;
+            height: 350px;
+            z-index: 1;
+        }
+        .character-info {
+            width: 70%;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        @keyframes slideFromRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideFromLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideToRight {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+        @keyframes slideToLeft {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(-100%); opacity: 0; }
+        }      
+    </style>
+</head>
+<body class="a-body">   
+    <div class="headSpace"></div>
+    <img src="css/i/USSbanner.png" class="banner">
     
+    <!-- 以下是导航栏的内容 -->
+    <div class="fixed-bar">
+        <div class="titleMain">
+            网站
+        </div>
+        <div class="titleSub">
+            一些玩意
+        </div>
+    </div>
+    <!-- 以上是导航栏的内容 -->
+
+    <div class="graphSpace"></div>
+    <p><b>“人们总是微笑着来到这，不放弃自己不自卑” —— 小行星坠落</b></p>
+    <br/>
+    <p style="font-family:arial;font-size:50px;">现在，开启你最伟大的旅途吧</p>
+    <a href="https://space.bilibili.com/475915131" target="_blank"><i>bilibili主页</i></a>
+    <a href="https://hisakor.github.io/" target="_blank"><i>原地tp</i></a>
+    <br/>
+    <!-- 施工封锁线 -->
+    <hr />
+    <h1 style="font-family:arial;color:f3bd55;font-size:20px;text-align:center">=⚠施工中⚠=</h1><hr />
+<!-- 施工封锁线 -->
+</body>
+
+
+
+
+<div class="b-body">
+    <div class="character-carousel" id="characterCarousel">
+        <!-- 人物图片将在这里动态生成 -->
+    </div>
+    <div class="character-info" id="characterInfo">
+        <!-- 人物信息将在这里动态显示 -->
+    </div>
+    <script>
+        const characters = [
+            {
+                name: "角色1",
+                image: "character1.jpg",
+                info: "这里是角色1的详细介绍...",
+                characteristics: "角色1的特点",
+                background: "角色1的背景故事"
+            },
+            {
+                name: "角色2",
+                image: "character2.jpg",
+                info: "这里是角色2的详细介绍...",
+                characteristics: "角色2的特点",
+                background: "角色2的背景故事"
+            },
+            {
+                name: "角色3",
+                image: "character3.jpg",
+                info: "这里是角色3的详细介绍...",
+                characteristics: "角色3的特点",
+                background: "角色3的背景故事"
+            }
+        ];
+        let currentIndex = 1;
+        function initializeCarousel() {
+            const carousel = document.getElementById('characterCarousel');
+            characters.forEach((character, index) => {
+                const container = createCharacterContainer(character, index);
+                carousel.appendChild(container);
+            });
+            showInfo(0);
+        }
+        function createCharacterContainer(character, index) {
+            const container = document.createElement('div');
+            container.className = 'character-image-container';
+            if (index === currentIndex) {
+                container.classList.add('active');
+            }
+            const img = document.createElement('img');
+            img.src = character.image;
+            img.alt = character.name;
+            img.className = 'character-image';
+            container.appendChild(img);
+            container.onclick = () => showInfo(index - currentIndex);
+            return container;
+        }
+        function showInfo(direction) {
+            const containers = document.querySelectorAll('.character-image-container');
+            containers[currentIndex].classList.remove('active');
+ 
+            const oldIndex = currentIndex;
+            currentIndex = (currentIndex + direction + characters.length) % characters.length;
+ 
+            updateCharacterInfo();
+            updateCarousel(oldIndex, direction);
+        }
+        function updateCharacterInfo() {
+            const character = characters[currentIndex];
+            const infoDiv = document.getElementById('characterInfo');
+            // 添加淡出动画
+            infoDiv.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => {
+                infoDiv.innerHTML = `
+                    <h2>${character.name}</h2>
+                    <p>${character.info}</p>
+                    <h3>特点</h3>
+                    <p>${character.characteristics}</p>
+                    <h3>背景故事</h3>
+                    <p>${character.background}</p>
+                `;
+                // 添加淡入动画
+                infoDiv.style.animation = 'fadeIn 0.3s ease';
+            }, 300);
+        }
+ 
+        function updateCarousel(oldIndex, direction) {
+            const carousel = document.getElementById('characterCarousel');
+            const containers = carousel.children;
+ 
+            // 为移出视图的容器添加动画
+            containers[1].style.animation = direction > 0 ? 'slideToLeft 0.5s ease' : 'slideToRight 0.5s ease';
+ 
+            setTimeout(() => {
+                carousel.innerHTML = '';
+                for (let i = -1; i <= 1; i++) {
+                    const index = (currentIndex + i + characters.length) % characters.length;
+                    const container = createCharacterContainer(characters[index], currentIndex + i);
+                    if (i === 0) {
+                        container.classList.add('active');
+                    }
+                    // 为新进入视图的容器添加动画
+                    if ((direction > 0 && i === 1) || (direction < 0 && i === -1)) {
+                        container.style.animation = direction > 0 ? 'slideFromRight 0.5s ease' : 'slideFromLeft 0.5s ease';
+                    }
+                    carousel.appendChild(container);
+                }
+            }, 250);
+        }
+ 
+        // 初始化轮播图
+        initializeCarousel();
+    </script>
+</div>
 </html>
 
