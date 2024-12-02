@@ -1,30 +1,24 @@
-body {
+.main-body {
     font-family: verdana;
     font-size: 20px;
 }
-
 hr {
     border-bottom: 2px solid #f3bd55;
 }
-
 .banner {
     position: absolute;
     left: 0;
 }
-
 p {
   font-family: verdana;
   font-size: 20px;
 }
-
 .graphSpace {
 padding-top: 35vh;
 }
-
 .headSpace {
 padding-top: 5vh;
 }
-
 .titleMain {
 position: relative;
 font-size: 30px;
@@ -33,13 +27,11 @@ top: 15px;
 left: 120px;
 color: white;
 }
-
 .SF {
     position: absolute;
     left: 0;
     z-index: 1000;
 }
-
 .titleSub {
 position: absolute;
 font-size: 15px;
@@ -47,7 +39,6 @@ top: 25px;
 right: 120px;
 color: white;
 }
-
 .fixed-bar {
   position: fixed;
   top: 0;
@@ -58,24 +49,76 @@ color: white;
   z-index: 999;
 }
 
+.second-body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
 .character-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 400px;
+    overflow: hidden;
+}
+.character-image-container {
+    width: 180px;
+    height: 250px;
+    margin: 0 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
     position: relative;
+}
+.character-image {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    border: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
 }
-
-.character-info-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
+.character-image-container:hover .character-image {
+    transform: scale(1.05);
+}
+.character-image-container.active {
+    width: 250px;
+    height: 350px;
+    z-index: 1;
+}
+.character-info {
+    width: 70%;
     padding: 20px;
+    text-align: center;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    z-index: 1000;
 }
 
-.character-carousel * {
-    pointer-events: none;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes slideFromRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideToRight {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+@keyframes slideToLeft {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-100%); opacity: 0; }
 }
