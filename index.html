@@ -230,14 +230,13 @@
             return container;
         }
         function showInfo(direction) {
-            const containers = document.querySelectorAll('.character-image-container');
+            const containers = Array.from(document.querySelectorAll('.character-image-container'));
             containers[currentIndex].classList.remove('active');
- 
-            const oldIndex = currentIndex;
-            currentIndex = (currentIndex + direction + characters.length) % characters.length;
- 
+            
+            currentIndex = (currentIndex + direction + characters.length) % characters.length; // 修正索引
+            
             updateCharacterInfo();
-            updateCarousel(oldIndex, direction);
+            updateCarousel(containers[currentIndex], direction);
         }
         function updateCharacterInfo() {
             const character = characters[currentIndex];
@@ -258,28 +257,35 @@
             }, 300);
         }
  
-        function updateCarousel(oldIndex, direction) {
+        function updateCarousel(oldContainer, direction) {
             const carousel = document.getElementById('characterCarousel');
-            const containers = carousel.children;
- 
-            // 为移出视图的容器添加动画
-            containers[1].style.animation = direction > 0 ? 'slideToLeft 0.5s ease' : 'slideToRight 0.5s ease';
- 
-            setTimeout(() => {
-                carousel.innerHTML = '';
-                for (let i = -1; i <= 1; i++) {
-                    const index = (currentIndex + i + characters.length) % characters.length;
-                    const container = createCharacterContainer(characters[index], currentIndex + i);
-                    if (i === 0) {
-                        container.classList.add('active');
-                    }
-                    // 为新进入视图的容器添加动画
-                    if ((direction > 0 && i === 1) || (direction < 0 && i === -1)) {
-                        container.style.animation = direction > 0 ? 'slideFromRight 0.5s ease' : 'slideFromLeft 0.5s ease';
-                    }
-                    carousel.appendChild(container);
+            // 为离开视图的容器应用动画
+            Array.from(carousel.children).forEach((container, index) => {
+                if (Math.abs(index - currentIndex) > 1) {
+                    container.style.animation = 'none';
+                } else if (index === currentIndex) {
+                    container.classList.add('active');
+                    container.style.animation = 'none';
+                } else {
+                    container.style.animation = direction > 0 ? 'slideToLeft 0.5s ease' : 'slideToRight 0.5s ease';
                 }
-            }, 250);
+            });
+
+            // 创建新的可视内容
+            const leftContainer = createCharacterContainer(
+                characters[(currentIndex - 1 + characters.length) % characters.length],
+                currentIndex - 1
+            );
+            leftContainer.style.animation = 'slideFromLeft 0.5s ease';
+
+            const rightContainer = createCharacterContainer(
+                characters[(currentIndex + 1) % characters.length],
+                currentIndex + 1
+            );
+            rightContainer.style.animation = 'slideFromRight 0.5s ease';
+
+            carousel.appendChild(leftContainer);
+            carousel.appendChild(rightContainer); 
         }
  
         // 初始化轮播图
