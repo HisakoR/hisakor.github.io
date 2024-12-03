@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -206,7 +206,7 @@
                 background: "虚以待坐"
             }
         ];
-        let currentIndex = 1;
+        let currentIndex = 0; // 改为0开始索引
         function initializeCarousel() {
             const carousel = document.getElementById('characterCarousel');
             characters.forEach((character, index) => {
@@ -215,6 +215,7 @@
             });
             showInfo(0);
         }
+
         function createCharacterContainer(character, index) {
             const container = document.createElement('div');
             container.className = 'character-image-container';
@@ -229,20 +230,28 @@
             container.onclick = () => showInfo(index - currentIndex);
             return container;
         }
+
         function showInfo(direction) {
-            const containers = Array.from(document.querySelectorAll('.character-image-container'));
+            const containers = document.querySelectorAll('.character-image-container');
             containers[currentIndex].classList.remove('active');
-            
-            currentIndex = (currentIndex + direction + characters.length) % characters.length; // 修正索引
-            
+
+            // 更新当前索引
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = characters.length - 1;
+            } else if (currentIndex >= characters.length) {
+                currentIndex = 0;
+            }
+
             updateCharacterInfo();
-            updateCarousel(containers[currentIndex], direction);
+            updateCarousel();
         }
+
         function updateCharacterInfo() {
             const character = characters[currentIndex];
             const infoDiv = document.getElementById('characterInfo');
-            // 添加淡出动画
             infoDiv.style.animation = 'fadeOut 0.3s ease';
+
             setTimeout(() => {
                 infoDiv.innerHTML = `
                     <h2>${character.name}</h2>
@@ -252,42 +261,33 @@
                     <h3>背景故事</h3>
                     <p>${character.background}</p>
                 `;
-                // 添加淡入动画
                 infoDiv.style.animation = 'fadeIn 0.3s ease';
             }, 300);
         }
- 
-        function updateCarousel(oldContainer, direction) {
+
+        function updateCarousel() {
             const carousel = document.getElementById('characterCarousel');
-            // 为离开视图的容器应用动画
-            Array.from(carousel.children).forEach((container, index) => {
-                if (Math.abs(index - currentIndex) > 1) {
-                    container.style.animation = 'none';
-                } else if (index === currentIndex) {
-                    container.classList.add('active');
-                    container.style.animation = 'none';
-                } else {
-                    container.style.animation = direction > 0 ? 'slideToLeft 0.5s ease' : 'slideToRight 0.5s ease';
-                }
+            const containers = carousel.children;
+
+            // 移除旧的容器
+            containers.forEach(container => {
+                container.style.animation = 'none';
             });
 
-            // 创建新的可视内容
-            const leftContainer = createCharacterContainer(
-                characters[(currentIndex - 1 + characters.length) % characters.length],
-                currentIndex - 1
-            );
-            leftContainer.style.animation = 'slideFromLeft 0.5s ease';
+            carousel.innerHTML = ''; // 清空内容
 
-            const rightContainer = createCharacterContainer(
-                characters[(currentIndex + 1) % characters.length],
-                currentIndex + 1
-            );
-            rightContainer.style.animation = 'slideFromRight 0.5s ease';
-
-            carousel.appendChild(leftContainer);
-            carousel.appendChild(rightContainer); 
+            // 创建新的容器
+            for (let i = -1; i <= 1; i++) {
+                const index = (currentIndex + i + characters.length) % characters.length;
+                const container = createCharacterContainer(characters[index], currentIndex + i);
+                carousel.appendChild(container);
+    
+                if (i === 0) {
+                    container.classList.add('active');
+                }
+            }
         }
- 
+
         // 初始化轮播图
         initializeCarousel();
     </script>
