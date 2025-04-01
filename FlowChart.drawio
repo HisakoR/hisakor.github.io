@@ -14,7 +14,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uq4aCa0WkTKRPATRxZhl-2" value="Output &quot;Enter three numbers&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="380" y="170" width="120" height="60" as="geometry" />
+          <mxGeometry x="330" y="170" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uq4aCa0WkTKRPATRxZhl-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uq4aCa0WkTKRPATRxZhl-8" target="uq4aCa0WkTKRPATRxZhl-10">
           <mxGeometry relative="1" as="geometry" />
@@ -55,7 +55,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uq4aCa0WkTKRPATRxZhl-12" value="Output &quot;Largest: &quot;, A" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="150" y="480" width="120" height="60" as="geometry" />
+          <mxGeometry x="130" y="480" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uq4aCa0WkTKRPATRxZhl-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="uq4aCa0WkTKRPATRxZhl-13" target="uq4aCa0WkTKRPATRxZhl-15">
           <mxGeometry relative="1" as="geometry" />
@@ -67,7 +67,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="uq4aCa0WkTKRPATRxZhl-14" value="Output &quot;Largest: &quot;, C" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="610" y="480" width="120" height="60" as="geometry" />
+          <mxGeometry x="590" y="480" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uq4aCa0WkTKRPATRxZhl-15" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="380" y="584.5" width="120" height="80" as="geometry" />
@@ -83,6 +83,12 @@
         </mxCell>
         <mxCell id="uq4aCa0WkTKRPATRxZhl-33" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="490" y="350" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uq4aCa0WkTKRPATRxZhl-34" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="420" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uq4aCa0WkTKRPATRxZhl-35" value="No" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="550" y="420" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
