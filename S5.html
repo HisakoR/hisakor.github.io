@@ -1,0 +1,216 @@
+<html>
+<head>
+    <title>Digital Classroom</title>
+    <style>
+
+        @keyframes intro {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes hanging {
+            0%{
+                transform: scale(100%);
+            }
+            50%{
+                transform: scale(105%);
+            }
+            100%{
+                transform: scale(100%);
+            }
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Centaur,serif;
+            background-image: url("image/content/bg/cw.jpg");
+            background-color: #b4a7a7;
+            background-blend-mode: soft-light;
+            background-repeat: repeat-y;
+            background-size: 100%;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .header{
+            color: #ffffff;
+            margin: auto;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+        .header h1{
+            padding-left: 30px;
+        }
+        .header h2{
+            top: 10px;
+            position: absolute;
+            right: 0;
+            padding-right: 100px;
+        }
+        .gallery{
+            text-shadow: 0 0 3px rgba(10, 16, 13, 0.27);
+            animation-name: intro;
+            animation-duration: 1s;
+            margin: auto;
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.13);
+            width: 50%;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        #classTitle{
+            font-size: larger;
+            position: relative;
+            top: -120px;
+            left: 20px;
+        }
+        #titleImg{
+            filter: contrast(20%) brightness(130%) sepia(80%) blur(2px);
+            width: 100%;
+            border-top-right-radius:20px;
+            border-top-left-radius:20px;
+            transition: all 0.2s;
+        }
+        #titleImg:hover{
+            filter: contrast(100%) brightness(100%) sepia(0%) blur(0);
+        }
+        #galleryContent{
+            position: relative;
+            top: -100px;
+            padding: 20px;
+        }
+
+
+        table{
+            background-color: rgba(255, 255, 255, 0.29);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+        }
+        .content{
+            backdrop-filter: blur(2px);
+            background-color: rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+            padding: 15px;
+        }
+        .content:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        table:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        .footer{
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            color: #ffffff;
+            margin: auto;
+            text-align: center;
+            height: 100px;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>| - Digital Classroom : Explore History -</h1>
+    <h2>The Cold War</h2>
+</div>
+<br>
+<div class="gallery">
+    <img id="titleImg" src="image/content/cwt.png" alt="The Cold War">
+    <div id="classTitle">
+        <h2>The Cold War</h2>
+        <p>geopolitical, ideological, and cultural conflict</p>
+    </div>
+    <div id="galleryContent">
+        <hr>
+        <br>
+        <div class="content">
+            <h2>Background</h2>
+            <hr>
+            <p>The Cold War was a geopolitical, ideological, and cultural conflict that lasted from approximately 1947 to the early 1990s, mainly between the United States and its allies versus the Soviet Union and its satellite states. This period was marked by intense rivalry but did not escalate into direct military conflict between the two superpowers, instead relying heavily on proxy wars, economic competition, and a substantial arms race.</p>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Characteristic</h2>
+            <hr>
+            <ul>
+                <li>Ideological Conflict: It was primarily a conflict between capitalism (led by the U.S.) and communism (led by the USSR).</li>
+                <li>Nuclear Arms Race: Both superpowers amassed large stockpiles of nuclear weapons, creating a state of Mutually Assured Destruction (MAD).</li>
+                <li>Proxy Wars: Various regions became battlegrounds, with the superpowers supporting opposing sides, such as:
+                    <ul>
+                        <li>Korean War (1950-1953)</li>
+                        <li>Vietnam War (1955-1975)</li>
+                        <li>Afghanistan War (1979-1989)</li>
+                    </ul>
+                </li>
+                <li>Space Race: Enhanced technological rivalry, highlighted by:
+                    <ul>
+                        <li>The launch of Sputnik by the USSR in 1957.</li>
+                        <li>The U.S. landing on the moon in 1969.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Major Events</h2>
+            <hr>
+            <ul>
+                <li>Truman Doctrine (1947): American policy to contain communism, supporting nations threatened by Soviet expansion.</li>
+                <li>Marshall Plan (1948): U.S. initiative to aid Western Europe's economic recovery to prevent the spread of communism.</li>
+                <li>NATO Formation (1949): A military alliance of Western nations to counter Soviet influence.</li>
+                <li>Warsaw Pact (1955): A collective defense treaty of the Soviet Union and its Eastern Bloc allies.</li>
+                <li>Cuban Missile Crisis (1962): The closest the world came to nuclear war, resulting from the U.S. discovery of Soviet missiles in Cuba.</li>
+                <li>Détente (1970s): A period of relaxed tensions featuring arms control agreements like the SALT treaties.</li>
+                <li>Fall of the Berlin Wall (1989): Symbolized the collapse of communist control in Eastern Europe and the end of the Cold War.</li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Consequences</h2>
+            <hr>
+            <ul>
+                <li>End of Communism in Eastern Europe: Events leading to the dissolution of the Soviet Union in 1991.</li>
+                <li>NATO Expansion: Growing membership of former Eastern Bloc countries.</li>
+                <li>Global Influence Shift: The U.S. emerged as the sole superpower, shaping the post-Cold War world order.</li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Ending</h2>
+            <hr>
+            <p>The Cold War was defined by its ideological divide between capitalism and communism, a series of proxy conflicts, nuclear arms accumulation, and cultural competition, culminating in significant global geopolitical shifts. Its end marked a transition towards a unipolar world led by the United States, reshaping international relations for decades to come.</p>
+        </div>
+
+        <br>
+        <br>
+        <hr>
+
+        <a href="Home.html">
+            <div class="content" style="text-align: center; color: #0a100d; font-weight: bold; font-size: large">- Back to Homepage -</div>
+        </a>
+
+        <hr>
+    </div>
+</div>
+
+<br>
+
+<div class="footer">
+    <hr>
+    <p>Educational Website project - Digital Classroom : Explore History</p>
+    <p>Created by - Butters G12 -</p>
+</div>
+
+</body>
+</html>

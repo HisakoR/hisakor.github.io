@@ -1,0 +1,342 @@
+<html>
+<head>
+    <title>Digital Classroom</title>
+    <style>
+
+        @keyframes intro {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes hanging {
+            0%{
+                transform: scale(100%);
+            }
+            50%{
+                transform: scale(105%);
+            }
+            100%{
+                transform: scale(100%);
+            }
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Centaur,serif;
+            background-image: url("image/content/bg/w2.jpg");
+            background-color: #b4a7a7;
+            background-blend-mode: soft-light;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .header{
+            color: #ffffff;
+            margin: auto;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+        .header h1{
+            padding-left: 30px;
+        }
+        .header h2{
+            top: 10px;
+            position: absolute;
+            right: 0;
+            padding-right: 100px;
+        }
+        .gallery{
+            text-shadow: 0 0 3px rgba(10, 16, 13, 0.27);
+            animation-name: intro;
+            animation-duration: 1s;
+            margin: auto;
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.13);
+            width: 50%;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        #classTitle{
+            font-size: larger;
+            position: relative;
+            top: -120px;
+            left: 20px;
+        }
+        #titleImg{
+            filter: contrast(20%) brightness(130%) sepia(80%) blur(2px);
+            width: 100%;
+            border-top-right-radius:20px;
+            border-top-left-radius:20px;
+            transition: all 0.2s;
+        }
+        #titleImg:hover{
+            filter: contrast(100%) brightness(100%) sepia(0%) blur(0);
+        }
+        #galleryContent{
+            position: relative;
+            top: -100px;
+            padding: 20px;
+        }
+        .contentShow{
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 16, 13, 0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.2s;
+        }
+        table{
+            background-color: rgba(255, 255, 255, 0.29);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+        }
+        .content{
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+            padding: 15px;
+        }
+        .content:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        table:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        .footer{
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            color: #ffffff;
+            margin: auto;
+            text-align: center;
+            height: 100px;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+
+        .contentShow{
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.07);
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            transition: all 0.5s;
+            border-radius: 10px;
+        }
+        .contentShow:hover{
+            opacity: 1;
+        }
+        .contentImageRight{
+            border-radius: 10px;
+            box-shadow: 0 0 5px 2px rgba(10, 16, 13, 0.35);
+            width: 200px;
+            position: absolute;
+            right: -200px;
+        }
+        .contentImageLeft{
+            border-radius: 10px;
+            box-shadow: 0 0 5px 2px rgba(10, 16, 13, 0.35);
+            width: 200px;
+            position: absolute;
+            left: -200px;
+        }
+        .childContent{
+            backdrop-filter: blur(2px);
+            border-radius: 5px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>| - Digital Classroom : Explore History -</h1>
+    <h2>World War II</h2>
+</div>
+<br>
+<div class="gallery">
+    <img id="titleImg" src="image/content/w2t.png" alt="World War II">
+    <div id="classTitle">
+        <h2>World War II</h2>
+        <p>The largest and most far-reaching war in human history</p>
+    </div>
+    <div id="galleryContent">
+        <hr>
+        <br>
+        <div class="content">
+            <h2>Main reasons</h2>
+            <hr>
+            <ul>
+                <li>Consequences of World War I: The unequal Treaty of Versailles after the war caused Germany's economic recession, social unrest, and provided soil for the rise of the Nazi Party.</li>
+                <li>Nationalism and territorial expansion: Countries such as Japan, Germany, and Italy promoted expansionism and tried to obtain resources and territory through war.</li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Timeline</h2>
+            <hr>
+            <ul>
+                <li><div class="childContent">
+                    <div class="contentShow">
+                        <img class="contentImageLeft" src="image\content\ww2\31.jpg" alt="content">
+                    </div>
+                    1931: Japan invades Northeast China, starting the "Manchurian Incident", paving the way for the subsequent war of aggression against China.</div></li>
+                <li><div class="childContent">
+                    <div class="contentShow">
+                        <img class="contentImageRight" src="image\content\ww2\35.jpg" alt="content">
+                    </div>
+                    1935: Italy invades Ethiopia.</div></li>
+                <li><div class="childContent">
+                    <div class="contentShow">
+                        <img class="contentImageLeft" src="image\content\ww2\36.jpg" alt="content">
+                    </div>
+                    1936: Nazi Germany and Italy form the Axis Powers, and Germany and Japan establish a military alliance.</div></li>
+                <li>
+                    <div class="childContent">1938:
+                        <ul>
+                            <li>Munich Agreement: Britain and France agree to Germany's annexation of the Sudetenland of Czechoslovakia, attempting to avoid war through appeasement.</li>
+                            <li>Kristallnacht, the Nazis carry out large-scale violent attacks on Jews in Germany and Austria.</li>
+                        </ul>
+                        <div class="contentShow">
+                            <img class="contentImageRight" src="image\content\ww2\38.jpg" alt="content">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="childContent">1939:
+                        <ul>
+                            <li>September 1: Germany invades Poland and launches World War II.</li>
+                            <li>September 3: Britain and France declare war on Germany and officially intervene in the war</li>
+                        </ul>
+                        <div class="contentShow">
+                            <img class="contentImageLeft" src="image\content\ww2\39.jpg" alt="content">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="childContent">1940:
+                        <ul>
+                            <li>April-June: Germany quickly invades and occupies Denmark and Norway (operation "Wickling Plan").</li>
+                            <li>May 10: Germany launches an attack on France, Belgium, and the Netherlands ("Operation Yellowbird").</li>
+                            <li>June 22: France surrenders, German troops occupy Paris.</li>
+                            <li>July-October: Battle of Britain, Germany tries to weaken Britain through air strikes, but fails.</li>
+                        </ul>
+                        <div class="contentShow">
+                            <img class="contentImageRight" src="image\content\ww2\40.jpg" alt="content">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="childContent">1941:
+                        <ul>
+                            <li>June 22: Germany launches Operation Barbarossa against the Soviet Union, causing huge casualties to the Soviet Union.</li>
+                            <li>December 7: Japan attacks Pearl Harbor in the United States, leading to the United States' formal entry into the war.</li>
+                            <li>December 8: The United States declares war on Japan, and then on Germany and Italy.</li>
+                        </ul>
+                        <div class="contentShow">
+                            <img class="contentImageLeft" src="image\content\ww2\41.jpg" alt="content">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="childContent">1942:
+                        <ul>
+                            <li>June 4-7: Battle of Midway, naval aviation defeats Japan, a turning point.</li>
+                            <li>August to November: The Battle of Stalingrad begins, and the Soviet Union begins to resist German aggression.</li>
+                        </ul>
+                        <div class="contentShow">
+                            <img class="contentImageRight" src="image\content\ww2/42.jpg" alt="content">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="childContent">1943:
+                        <ul>
+                            <li>February 2: The Soviet Union wins the victory in Stalingrad, marking a turning point on the Eastern Front.</li>
+                            <li>July-August: Allied forces land in Italy and enter the Italian mainland.</li>
+                            <li>November: At the Tehran Conference, Roosevelt, Churchill, and Stalin discuss plans to defeat the Axis.</li>
+                        </ul>
+                        <div class="contentShow">
+                            <img class="contentImageLeft" src="image\content\ww2\43.png" alt="content">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="childContent">1944:
+                        <ul>
+                            <li>June 6: Normandy Landing (D-Day), the Allies launch a counterattack on the Western Front.</li>
+                            <li>August 25: Paris is liberated and the Allies advance into France.</li>
+                            <li>December: Germany launches its last major counterattack, the Battle of Barger ("Operation Raid").</li>
+                        </ul>
+                        <div class="contentShow">
+                            <img class="contentImageRight" src="image\content\ww2\44.jpg" alt="content">
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="childContent">1945:
+                        <ul>
+                            <li>April 30: Hitler commits suicide, and the German top brass begins to face defeat.</li>
+                            <li>May 7: Germany unconditionally surrenders, and the European battlefield ends (V-J Day).</li>
+                            <li>August 6: The United States drops an atomic bomb on Hiroshima.</li>
+                            <li>August 9: The United States drops a second atomic bomb on Nagasaki.</li>
+                            <li>August 15: Japan announces its surrender, and World War II ends (can be called "V-J Day" or "Unconditional Surrender Day").</li>
+                        </ul>
+                        <div class="contentShow">
+                            <img class="contentImageLeft" src="image\content\ww2\45.jpg" alt="content">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        <br>
+        <div class="content">
+            <h2>War consequences</h2>
+            <hr>
+            <ul>
+                <li>Casualties: An estimated 70 million people died, with a large number of casualties and including civilians.</li>
+                <li>Changes in the world pattern: The United Nations was established after the war to maintain international peace and security.</li>
+                <li>The beginning of the Cold War: After the war, the United States and the Soviet Union emerged as superpowers and entered a decades-long Cold War period.</li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Ending</h2>
+            <hr>
+            <p>World War II was a global conflict caused by multiple political, economic and social factors. It not only changed the fate of many countries, but also had a profound impact on international relations, military strategy and world politics. Through this war, mankind's desire for peace and reflection on war have become important historical themes.</p>
+        </div>
+
+        <br>
+        <br>
+        <hr>
+
+        <a href="Home.html">
+            <div class="content" style="text-align: center; color: #0a100d; font-weight: bold; font-size: large">- Back to Homepage -</div>
+        </a>
+
+        <hr>
+    </div>
+</div>
+
+<br>
+
+<div class="footer">
+    <hr>
+    <p>Educational Website project - Digital Classroom : Explore History</p>
+    <p>Created by - Butters G12 -</p>
+</div>
+
+</body>
+</html>

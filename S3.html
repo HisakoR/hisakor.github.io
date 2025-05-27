@@ -1,0 +1,241 @@
+<html>
+<head>
+    <title>Digital Classroom</title>
+    <style>
+
+        @keyframes intro {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes hanging {
+            0%{
+                transform: scale(100%);
+            }
+            50%{
+                transform: scale(105%);
+            }
+            100%{
+                transform: scale(100%);
+            }
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Centaur,serif;
+            background-image: url("image/content/bg/ir.jpg");
+            background-color: #b4a7a7;
+            background-blend-mode: soft-light;
+            background-repeat: repeat-y;
+            background-size: 100%;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .header{
+            color: #ffffff;
+            margin: auto;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+        .header h1{
+            padding-left: 30px;
+        }
+        .header h2{
+            top: 10px;
+            position: absolute;
+            right: 0;
+            padding-right: 100px;
+        }
+        .gallery{
+            text-shadow: 0 0 3px rgba(10, 16, 13, 0.27);
+            animation-name: intro;
+            animation-duration: 1s;
+            margin: auto;
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.13);
+            width: 50%;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        #classTitle{
+            font-size: larger;
+            position: relative;
+            top: -120px;
+            left: 20px;
+        }
+        #titleImg{
+            filter: contrast(20%) brightness(130%) sepia(80%) blur(2px);
+            width: 100%;
+            border-top-right-radius:20px;
+            border-top-left-radius:20px;
+            transition: all 0.2s;
+        }
+        #titleImg:hover{
+            filter: contrast(100%) brightness(100%) sepia(0%) blur(0);
+        }
+        #galleryContent{
+            position: relative;
+            top: -100px;
+            padding: 20px;
+        }
+        table{
+            background-color: rgba(255, 255, 255, 0.29);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+        }
+        .content{
+            backdrop-filter: blur(2px);
+            background-color: rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+            padding: 15px;
+        }
+        .content:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        table:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        .footer{
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            color: #ffffff;
+            margin: auto;
+            text-align: center;
+            height: 100px;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>| - Digital Classroom : Explore History -</h1>
+    <h2>Industrial Revolution</h2>
+</div>
+<br>
+<div class="gallery">
+    <img id="titleImg" src="image/content/irt.png" alt="Industrial Revolution">
+    <div id="classTitle">
+        <h2>Industrial Revolution</h2>
+        <p>Transition from an agricultural society to an industrial society in Mid-18th century to the early 19th century.</p>
+    </div>
+    <div id="galleryContent">
+        <hr>
+        <br>
+        <div class="content">
+            <h2>Background</h2>
+            <hr>
+            <ul>
+                <li>Agricultural Revolution: Before the Industrial Revolution, Europe experienced an Agricultural Revolution, in which increased agricultural production provided sufficient food and labor for industrialization.</li>
+                <li>Advances in Science and Technology: Advances in science and technology laid the foundation for the Industrial Revolution, with inventions such as the steam engine changing the way production was done.</li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Video</h2>
+            <iframe width="100%" height="50%" src="https://youtube.com/embed/xLhNP0qp38Q?si=HR6ATSf8riDYSA5r"></iframe>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Characteristic</h2>
+            <hr>
+            <ul>
+                <li>Mechanized production
+                    <ul>
+                        <li>On August 24, 1896, independence leader Andres Bonifacio founded Katipunan, a secret organization aimed at opposing Spanish rule.</li>
+                        <li>War breaks out: In the same year, the Industrial Revolution movement openly launched an uprising, forming a large-scale armed conflict.</li>
+                    </ul>
+                </li>
+                <li>Transportation revolution
+                    <ul>
+                        <li>Innovations in transportation methods, such as the emergence of railways and steamships, made the transportation of goods faster and more efficient.</li>
+                        <li>The construction of railway networks made the transportation of resources and population mobility in inland areas more convenient.</li>
+                    </ul>
+                </li>
+                <li>Urbanization
+                    <ul>
+                        <li>The Industrial Revolution led to a large number of people migrating from rural areas to cities, forming new industrial cities.</li>
+                        <li>Prominent urbanization is often accompanied by the deterioration of living conditions and the increase of social problems.</li>
+                    </ul>
+                </li>
+                <li>Changes in the labor force
+                    <ul>
+                        <li>The nature of workers changed from agricultural workers to industrial workers.</li>
+                        <li>The wage labor system emerged, and workers often faced the dilemma of long working hours and low wages.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Important Innovations</h2>
+            <hr>
+            <ul>
+                <li>Steam engine: Improved by James Watt, it became the power core of the Industrial Revolution.</li>
+                <li>Textile machine: Such as the spinning jenny and water-powered textile machine, which promoted the revolution of the textile industry.</li>
+                <li>Mechanized agricultural equipment: Such as seed drills and harvesters, which made agricultural production more efficient</li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Impact</h2>
+            <hr>
+            <ul>
+                <li>Economic
+                    <ul>
+                        <li>The Industrial Revolution brought about an increase in productivity and promoted economic growth.</li>
+                        <li>The rise of industrial capitalism promoted the development of international trade.</li>
+                    </ul>
+                </li>
+                <li>Social
+                    <ul>
+                        <li>The great changes in lifestyle have led to significant changes in the social structure, education level and living conditions of urban residents.</li>
+                        <li>At the same time, workers' awareness of their rights and interests has increased, giving rise to the workers' movement and social reform.</li>
+                    </ul>
+                </li>
+                <li>Environmental
+                    <ul>
+                        <li>The pollution problem caused by industrialization has intensified, leading to air and water pollution, as well as the destruction of the ecological environment.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Ending</h2>
+            <hr>
+            <p>The Industrial Revolution is not only a technological and economic transformation, but also a profound change in social structure, lifestyle and ideas. It laid the foundation for modern industrial society and had a profound impact on the global economy, society and culture.</p>
+        </div>
+
+        <br>
+        <br>
+        <hr>
+
+        <a href="Home.html">
+            <div class="content" style="text-align: center; color: #0a100d; font-weight: bold; font-size: large">- Back to Homepage -</div>
+        </a>
+
+        <hr>
+    </div>
+</div>
+
+<br>
+
+<div class="footer">
+    <hr>
+    <p>Educational Website project - Digital Classroom : Explore History</p>
+    <p>Created by - Butters G12 -</p>
+</div>
+
+</body>
+</html>

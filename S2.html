@@ -1,0 +1,215 @@
+<html>
+<head>
+    <title>Digital Classroom</title>
+    <style>
+
+        @keyframes intro {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes hanging {
+            0%{
+                transform: scale(100%);
+            }
+            50%{
+                transform: scale(105%);
+            }
+            100%{
+                transform: scale(100%);
+            }
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Centaur,serif;
+            background-image: url("image/content/bg/pi.jpeg");
+            background-color: #b4a7a7;
+            background-blend-mode: soft-light;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .header{
+            color: #ffffff;
+            margin: auto;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+        .header h1{
+            padding-left: 30px;
+        }
+        .header h2{
+            top: 10px;
+            position: absolute;
+            right: 0;
+            padding-right: 100px;
+        }
+        .gallery{
+            text-shadow: 0 0 3px rgba(10, 16, 13, 0.27);
+            animation-name: intro;
+            animation-duration: 1s;
+            margin: auto;
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.13);
+            width: 50%;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        #classTitle{
+            font-size: larger;
+            position: relative;
+            top: -120px;
+            left: 20px;
+        }
+        #titleImg{
+            filter: contrast(20%) brightness(130%) sepia(80%) blur(2px);
+            width: 100%;
+            border-top-right-radius:20px;
+            border-top-left-radius:20px;
+            transition: all 0.2s;
+        }
+        #titleImg:hover{
+            filter: contrast(100%) brightness(100%) sepia(0%) blur(0);
+        }
+        #galleryContent{
+            position: relative;
+            top: -100px;
+            padding: 20px;
+        }
+        table{
+            background-color: rgba(255, 255, 255, 0.29);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+        }
+        .content{
+            backdrop-filter: blur(2px);
+            background-color: rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+            padding: 15px;
+        }
+        .content:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        table:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        .footer{
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            color: #ffffff;
+            margin: auto;
+            text-align: center;
+            height: 100px;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>| - Digital Classroom : Explore History -</h1>
+    <h2>Philippine Independence</h2>
+</div>
+<br>
+<div class="gallery">
+    <img id="titleImg" src="image/content/pit.png" alt="Philippine Independence">
+    <div id="classTitle">
+        <h2>Philippine Independence</h2>
+        <p>Between 1896 and 1898, the Filipino people waged an armed struggle to break free from Spanish colonial rule.</p>
+    </div>
+    <div id="galleryContent">
+        <hr>
+        <br>
+        <div class="content">
+            <h2>Background</h2>
+            <hr>
+            <ul>
+                <li>Spanish Colonial Rule: Since the 16th century, the Philippines has been under Spanish colonial rule and has experienced nearly three centuries of exploitation and oppression.</li>
+                <li>Nationalist Thought: At the end of the 19th century, nationalist sentiment gradually rose in the Philippines, and many intellectuals began to call for freedom and independence, forming various political movements.</li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Map of Philippine</h2>
+            <iframe width="100%" height="50%" src="https://map.baidu.com/@13502570.106128598,1107278.5544843804,6.49z"></iframe>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Timeline</h2>
+            <hr>
+            <ul>
+                <li>1896 - Camarda Revolution
+                    <ul>
+                        <li>On August 24, 1896, independence leader Andres Bonifacio founded Katipunan, a secret organization aimed at opposing Spanish rule.</li>
+                        <li>War breaks out: In the same year, the Philippine independence movement openly launched an uprising, forming a large-scale armed conflict.</li>
+                    </ul>
+                </li>
+                <li>1896 - Battle of Honbridge
+                    <ul>
+                        <li>This was the first major battle in the Philippine War of Independence. Although the Philippine army suffered setbacks in the early stages, this battle inspired the people's fighting spirit.</li>
+                    </ul>
+                </li>
+                <li>1897 - War in Mexico City and Manila
+                    <ul>
+                        <li>More complex in nature, involving different leaders, internal divisions, and the intervention of foreign powers.</li>
+                    </ul>
+                </li>
+                <li>1898 - US intervention
+                    <ul>
+                        <li>In 1898, the United States won the Spanish-American War and gained control of the Philippines.</li>
+                        <li>After the Treaty of Paris signed between the United States and Spain, the Philippines became a colony of the United States.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <div class="content">
+            <h2>Result</h2>
+            <hr>
+            <ul>
+                <li>Conflict between the Philippines and the United States: Although the Spanish colonial period ended, the Philippine-American War (1899-1902) broke out immediately to resist the new colonial rule.</li>
+                <li>Awakening of national consciousness: This war of independence greatly promoted nationalist sentiment in the Philippines, and many subsequent political movements and independence consciousness were influenced by this period.</li>
+                <li>In 1916, the US Congress passed the Jones Act, promising future independence for the Philippines</li>
+            </ul>
+        </div>
+
+        <br>
+
+        <div class="content">
+            <h2>Ending</h2>
+            <hr>
+            <p>The Philippine War of Independence is a multifaceted, multi-factorial historical event that not only reflects the courage of the Filipino people in resisting foreign rule, but also reflects their desire for national self-determination. Although independence was ultimately not achieved, the war had a profound impact on Philippine history and laid the foundation for the subsequent independence movement.</p>
+        </div>
+
+        <br>
+        <br>
+        <hr>
+
+        <a href="Home.html">
+            <div class="content" style="text-align: center; color: #0a100d; font-weight: bold; font-size: large">- Back to Homepage -</div>
+        </a>
+
+        <hr>
+    </div>
+</div>
+
+<br>
+
+<div class="footer">
+    <hr>
+    <p>Educational Website project - Digital Classroom : Explore History</p>
+    <p>Created by - Butters G12 -</p>
+</div>
+
+</body>
+</html>

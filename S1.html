@@ -1,0 +1,350 @@
+<html>
+<head>
+    <title>Digital Classroom</title>
+    <style>
+
+        @keyframes intro {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes hanging {
+            0%{
+                transform: scale(100%);
+            }
+            50%{
+                transform: scale(105%);
+            }
+            100%{
+                transform: scale(100%);
+            }
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Centaur,serif;
+            background-image: url("image/content/bg/ac.jpg");
+            background-color: #b4a7a7;
+            background-blend-mode: soft-light;
+            background-repeat: repeat-y;
+            background-size: 100%;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .header{
+            color: #ffffff;
+            margin: auto;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+        .header h1{
+            padding-left: 30px;
+        }
+        .header h2{
+            top: 10px;
+            position: absolute;
+            right: 0;
+            padding-right: 100px;
+        }
+        .gallery{
+            text-shadow: 0 0 3px rgba(10, 16, 13, 0.27);
+            animation-name: intro;
+            animation-duration: 1s;
+            margin: auto;
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.13);
+            width: 50%;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        #classTitle{
+            font-size: larger;
+            position: relative;
+            top: -120px;
+            left: 20px;
+        }
+        #titleImg{
+            filter: contrast(20%) brightness(130%) sepia(80%) blur(2px);
+            width: 100%;
+            border-top-right-radius:20px;
+            border-top-left-radius:20px;
+            transition: all 0.2s;
+        }
+        #titleImg:hover{
+            filter: contrast(100%) brightness(100%) sepia(0%) blur(0);
+        }
+        #galleryContent{
+            position: relative;
+            top: -100px;
+            padding: 20px;
+        }
+        .contentShow{
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 16, 13, 0);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .contentShow:hover{
+            opacity: 1;
+        }
+        .contentImageRight{
+            border-radius: 10px;
+            box-shadow: 0 0 5px 2px rgba(10, 16, 13, 0.35);
+            height: 100%;
+            position: absolute;
+            right: -35%;
+        }
+        .contentImageLeft{
+            border-radius: 10px;
+            box-shadow: 0 0 5px 2px rgba(10, 16, 13, 0.35);
+            height: 100%;
+            position: absolute;
+            left: -35%;
+        }
+        table{
+            background-color: rgba(255, 255, 255, 0.29);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+        }
+        .content{
+            backdrop-filter: blur(2px);
+            background-color: rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            box-shadow: 0 0 2px 2px rgba(10, 16, 13, 0.18);
+            transition: all 0.2s;
+            padding: 15px;
+        }
+        .content:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        table:hover{
+            background-color: rgb(255, 255, 255);
+        }
+        .footer{
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            color: #ffffff;
+            margin: auto;
+            text-align: center;
+            height: 100px;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>| - Digital Classroom : Explore History -</h1>
+    <h2>Ancient Civilizations</h2>
+</div>
+<br>
+<div class="gallery">
+    <img id="titleImg" src="image/content/act.png" alt="Ancient Civilizations">
+    <div id="classTitle">
+        <h2>Ancient Civilizations</h2>
+        <p>The period from 3500 BC to 1000 BC is called the ancient civilization period.</p>
+    </div>
+    <div id="galleryContent">
+        <hr>
+        <br>
+        <div class="content">
+            <h2>Mesopotamia</h2>
+            <hr>
+            <ul>
+                <li>Location: Between the Tigris and Euphrates Rivers.</li>
+                <li>Key Contributions:
+                    <ul>
+                        <li>Writing System: The invention of cuneiform, one of the earliest forms of writing.</li>
+                        <li>Legal Codes: The Code of Hammurabi, one of the first written legal codes.</li>
+                        <li>City-States: Developed cities like Ur, Babylon, and Assyria.</li>
+                    </ul>
+                </li>
+                <li>Society/Religion: Polytheistic beliefs with ziggurats as central temples.</li>
+            </ul>
+
+            <div class="contentShow">
+                <img class="contentImageRight" src="image/content/ac/s1.png" alt="cimg">
+            </div>
+
+        </div>
+        <br>
+        <div class="content">
+            <h2>Ancient Egypt</h2>
+            <hr>
+            <ul>
+                <li>Location: Northeastern Africa, along the Nile River.</li>
+                <li>Key Contributions:
+                    <ul>
+                        <li>Pyramids and Architecture: Mastery in monumental architecture, including the pyramids of Giza.</li>
+                        <li>Hieroglyphics: A complex system of writing using symbols.</li>
+                        <li>Art and Culture: Rich mythology and advancements in medicine, mathematics, and astronomy.</li>
+                    </ul>
+                </li>
+                <li>Society/Religion: Strong belief in the afterlife, with pharaohs considered divine.</li>
+            </ul>
+
+            <div class="contentShow">
+                <img class="contentImageLeft" src="image/content/ac/s2.png" alt="cimg">
+            </div>
+
+        </div>
+        <br>
+        <div class="content">
+            <h2>Indus Valley Civilization</h2>
+            <hr>
+            <ul>
+                <li>Location: North-Western regions of South Asia (present-day Pakistan and Northwest India).</li>
+                <li>Key Contributions:
+                    <ul>
+                        <li>Urban Planning: Cities like Mohenjo-Daro and Harappa, featuring advanced drainage systems and grid layouts.</li>
+                        <li>Trade: Extensive trade networks with Mesopotamia.</li>
+                    </ul>
+                </li>
+                <li>Society/Religion: Little is known about their religious beliefs due to undeciphered writing but suggestedness of possibly non-theistic practices.</li>
+            </ul>
+
+            <div class="contentShow">
+                <img class="contentImageRight" src="image/content/ac/s3.png" alt="cimg">
+            </div>
+
+        </div>
+        <br>
+        <div class="content">
+            <h2>Ancient China</h2>
+            <hr>
+            <ul>
+                <li>Location: East Asia, predominantly along the Yellow River.</li>
+                <li>Key Contributions:
+                    <ul>
+                        <li>Philosophy: Development of Confucianism and Daoism.</li>
+                        <li>Inventions: Gunpowder, the compass, papermaking, and the printing press.</li>
+                        <li>Dynastic Rule: The concept of the Mandate of Heaven influenced governance and social structure.</li>
+                    </ul>
+                </li>
+                <li>Society/Religion: Ancestor worship and a strong sense of family hierarchy.</li>
+            </ul>
+
+            <div class="contentShow">
+                <img class="contentImageLeft" src="image/content/ac/s4.png" alt="cimg">
+            </div>
+
+        </div>
+        <br>
+        <div class="content">
+            <h2>Ancient Greece</h2>
+            <hr>
+            <ul>
+                <li>Location: Southeastern Europe, encompassing numerous city-states.</li>
+                <li>Key Contributions:
+                    <ul>
+                        <li>Philosophy and Democracy: Birthplace of philosophical thought (e.g., Socrates, Plato, Aristotle) and the concept of democracy in Athens.</li>
+                        <li>Arts and Architecture: Development of classical architecture (Doric, Ionic, Corinthian orders) and fine arts.</li>
+                    </ul>
+                </li>
+                <li>Society/Religion: Polytheistic, with gods and goddesses deeply integrated into daily life, from festivals to the Olympic Games.</li>
+            </ul>
+
+            <div class="contentShow">
+                <img class="contentImageRight" src="image/content/ac/s5.png" alt="cimg">
+            </div>
+
+        </div>
+        <br>
+
+        <table border="1" align="center" cellpadding="10px">
+            <tr>
+                <th colspan="5"><h2>Summary</h2></th>
+            </tr>
+
+            <tr>
+                <th>Civilization</th>
+                <th width="20%">Period</th>
+                <th>Contributions</th>
+                <th>Social Structure</th>
+                <th>Religious Beliefs</th>
+            </tr>
+
+            <tr>
+                <td>Mesopotamia</td>
+                <td>c. 3500 - 500 BCE</td>
+                <td>Cuneiform writing, Code of Hammurabi, city-states (e.g., Ur, Babylon, Assyria)</td>
+                <td>City-states with a blend of monarchy and theocracy</td>
+                <td>Polytheistic beliefs with numerous deities</td>
+            </tr>
+
+            <tr>
+                <td>Ancient Egypt</td>
+                <td>c. 3100 - 30 BCE</td>
+                <td>Pyramids and monumental architecture, hieroglyphics, advances in medicine and astronomy</td>
+                <td>Centralized monarchy with divine kingship</td>
+                <td>Polytheistic, strong belief in the afterlife</td>
+            </tr>
+
+            <tr>
+                <td>Indus Valley Civilization</td>
+                <td>c. 2600 - 1900 BCE</td>
+                <td>Urban planning (Mohenjo-Daro, Harappa), advanced drainage systems</td>
+                <td>Complex societal structure, possibly commerce-oriented</td>
+                <td>Limited knowledge of religious beliefs, possibly non-theistic</td>
+            </tr>
+
+            <tr>
+                <td>Ancient China</td>
+                <td>c. 2100 BCE - 220 AD</td>
+                <td>Confucianism and Daoism, inventions like gunpowder, the compass, papermaking, and printing</td>
+                <td>Centralized government with important family hierarchies</td>
+                <td>Ancestor worship and veneration of family spirits</td>
+            </tr>
+
+            <tr>
+                <td>Ancient Greece</td>
+                <td>c. 800 - 150 BCE</td>
+                <td>Birthplace of philosophy, democracy, classical arts and architecture</td>
+                <td>Independent city-states with varied governance</td>
+                <td>Polytheistic, deeply integrated into cultural life</td>
+            </tr>
+
+        </table>
+
+        <br>
+
+        <div class="content">
+            <h2>Ending</h2>
+            <hr>
+            <p>Each civilization has its own unique contributions, social structures, and religious beliefs, which have largely shaped the course of human history. By comparing these civilizations, we can gain a clearer understanding of the diversity of human culture and its evolution.</p>
+        </div>
+
+        <br>
+        <br>
+        <hr>
+
+        <a href="Home.html">
+            <div class="content" style="text-align: center; color: #0a100d; font-weight: bold; font-size: large">- Back to Homepage -</div>
+        </a>
+
+        <hr>
+    </div>
+</div>
+
+<br>
+
+<div class="footer">
+    <hr>
+    <p>Educational Website project - Digital Classroom : Explore History</p>
+    <p>Created by - Butters G12 -</p>
+</div>
+
+</body>
+</html>

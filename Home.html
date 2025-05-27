@@ -1,0 +1,193 @@
+<html>
+<head>
+    <title>Digital Classroom</title>
+    <style>
+
+        @keyframes intro {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes hanging {
+            0%{
+                transform: scale(100%);
+            }
+            50%{
+                transform: scale(105%);
+            }
+            100%{
+                transform: scale(100%);
+            }
+        }
+
+        body{
+            padding: 0;
+            margin: 0;
+            font-family: Centaur,serif;
+            background-image: url("image/background.jpg");
+            background-color: #b4a7a7;
+            background-blend-mode: soft-light;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .header{
+            color: #ffffff;
+            margin: auto;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+        }
+        .header h1{
+            padding-left: 30px;
+        }
+        .header h2{
+            top: 10px;
+            position: absolute;
+            right: 0;
+            padding-right: 100px;
+        }
+        .gallery{
+            text-shadow: 0 0 3px rgba(10, 16, 13, 0.27);
+            animation-name: intro;
+            animation-duration: 1s;
+            margin: auto;
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.13);
+            text-align: center;
+            padding: 20px;
+            width: 50%;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            transition: all 0.2s;
+        }
+        .gallery:hover{
+            background: rgba(255, 255, 255, 0.50);
+        }
+        .footer{
+            background: rgb(31, 31, 31);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            color: #ffffff;
+            position: absolute;
+            margin: auto;
+            text-align: center;
+            bottom: 0;
+            box-shadow: 0 0 5px 5px rgba(10, 16, 13, 0.28);
+
+        }
+        .galleryContent{
+            display: inline-flex;
+            transition: all 0.2s;
+            width: 17%;
+            text-shadow: 0 0 5px #000000;
+        }
+        .galleryContent:hover{
+            animation-name: hanging;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            width: 20%;
+            filter: brightness(110%);
+        }
+        .galleryContent:active{
+            width: 19%;
+            filter: brightness(80%);
+        }
+        .galleryContent img{
+            box-shadow: 0 0 5px 2px rgba(10, 16, 13, 0.23);
+            border-radius: 10px;
+            width: 100%;
+            filter: brightness(90%);
+        }
+        .galleryContent p{
+            text-align: left;
+            font-size: large;
+            position: relative;
+            top: -70px;
+            left: 10px;
+        }
+        .galleryContent a{
+            color: #ffffff;
+        }
+        #LearnMore{
+            margin: auto;
+            text-align: center;
+            width: 100px;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.07);
+            transition: all 0.2s;
+        }
+        #LearnMore a{
+            color: #0a100d;
+        }
+        #LearnMore:hover{
+            transform: scale(110%);
+            background: rgb(255, 255, 255);
+        }
+        #LearnMore:active{
+            transform: scale(100%);
+            filter: brightness(80%);
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>| - Digital Classroom : Explore History -</h1>
+    <h2>butters.edu</h2>
+</div>
+<br>
+<div class="gallery">
+    <h2>Welcome to History Class</h2>
+    <p>Studying history can not only help us understand and interpret current social phenomena, but also provide inspiration for future decision-making. This is not only about academic knowledge, but also about social responsibility and personal growth.</p>
+    <hr>
+    <div class="galleryContent">
+        <a href="S1.html">
+            <img src="image/home/ac.png" alt="content2">
+            <p>Ancient<br>Civilizations</p>
+        </a>
+    </div>
+    <div class="galleryContent">
+        <a href="S2.html">
+            <img src="image/home/pi.png" alt="content3">
+            <p>Philippine<br>Independence</p>
+        </a>
+    </div>
+    <div class="galleryContent">
+        <a href="S3.html">
+            <img src="image/home/ir.png" alt="content5">
+            <p>Industrial<br>Revolution</p>
+        </a>
+    </div>
+    <div class="galleryContent">
+        <a href="S4.html">
+            <img src="image/home/ww2.png" alt="content1">
+            <p>World War II</p>
+        </a>
+    </div>
+    <div class="galleryContent">
+        <a href="S5.html">
+            <img src="image/home/cdw.png" alt="content4">
+            <p>The Cold War</p>
+        </a>
+    </div>
+    <hr>
+    <br><br>
+    <div id="LearnMore"><a href="Resources.html">Learn more</a></div>
+</div>
+
+<div class="footer">
+    <hr>
+    <p>Educational Website project - Digital Classroom : Explore History</p>
+    <p>Created by - Butters G12 -</p>
+</div>
+
+</body>
+</html>
